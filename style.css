@@ -1,0 +1,190 @@
+:root {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+@font-face {
+    font-family: bebas_neue;
+    src: url("./fonts/bebas_neue/BebasNeue-Regular.ttf"),
+        url("./fonts/bebas_neue/BebasNeue-Regular.woff");
+
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("./Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+body {
+    background-color: #223538;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    color: #fff;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+article p {
+    line-height: 1.5em;
+}
+
+.box {
+    height: 50px;
+    background-color: rgb(73, 39, 35, .7);
+    grid-column:1/3;
+}
+
+
+
+/* my name element- large */
+.name {
+    font-size: 6rem;
+    margin-bottom: 0;
+}
+
+.job {
+    font-family: Raleway;
+    text-transform: uppercase;
+    margin-top: 0
+}
+
+.head {
+    align-self: center;
+}
+
+h1, h2, h3 {
+    font-family: bebas_neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+h3 {
+    font-family: Raleway;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+h2 {
+    color: #f1523f;
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(4, auto);
+        grid-auto-flow: dense;   
+        background-color: #182D30;   
+    }
+    
+    /* .container > *{
+        border: 1px red solid;
+    } */
+    
+    .container > * {
+        margin-left: 2rem;
+    }
+    .container > :first-child {
+        margin-left: 0;
+    }
+    .container > * + * {
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+img {
+    width: 250px;
+    padding-top: 1em;
+}
+
+
+.image {
+    grid-column: 1/2;
+    grid-row: span 1;
+    text-align: center;
+}
+
+
+.school {
+    color:#f1523f;
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: bolder;
+}
+
+ul {
+    margin: 0;
+}
+ul.dashed {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul.dashed > li {
+    text-indent: -5px;
+}
+
+ul.dashed > li:before {
+    content: "-  ";
+    text-indent: -5px;
+}
+ul li + li {
+    padding-top: .5em;
+}
+
+.align-bottom{
+    display: flex;
+    grid-template-columns: 1fr;
+}
+
+.align-bottom div {
+    align-self: flex-end;   
+}
+
+.special {
+    padding-top: 2em;
+}
+
+.link {
+    grid-column: 1/2;
+}
+
+.link a {
+    text-decoration: none;
+    color: #f1523f;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 2vh;
+    }
+    .dark{
+        background-color:#182D30;
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+    .light {
+        background-color: #223538;
+    }
+
+    .box {
+        height: 50px;
+        background-color: rgb(73, 39, 35);
+        grid-column:1/3;
+    }
+    .container > * {
+        display: block;
+        text-align: center;
+    }
+    .container > * + *{
+        margin-bottom: 2em;
+    }
+    .special {
+        padding-top: 0;
+    }
+
+
+}
